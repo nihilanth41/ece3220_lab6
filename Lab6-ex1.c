@@ -4,18 +4,25 @@ int main()
 {
     char* fileName;
     printf("Specify file name you would like to print to: \n");
-    scanf("%s",&fileName);
+    scanf("%s",fileName);
  
 
-    FILE* file1 = fopen(fileName, "a+");
+
  
-    char c;
+
+
+	FILE* file1 = fopen(fileName, "a+");
+	int c;
+if(file1 != NULL)
+{
+	
     while ((c=getchar()) != EOF)
     {
-        fprintf(file1, &c);
+        fprintf(file1, "%d", c);
     }
- 
     fclose(file1);
+ }
+
  
     printf("CTRL+d is a correct ending");
  
