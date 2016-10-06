@@ -3,7 +3,7 @@
 
 void tester(int* c, int k) {
 	printf("x[%d] = %d\n", k, c[k]);
-	c[10000]=1309;
+	c[1000]=1309;
 }
 
 int main(int argc, char* argv[]) {
