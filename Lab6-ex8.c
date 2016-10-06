@@ -10,9 +10,15 @@ int main(void)
 	scanf("%s",s);
 	ln = strlen(s);
 	dyn_s = (char*)malloc(strlen(s)+1);
+
+	free(dyn_s);
+
 	dyn_s = s;
 	dyn_s[strlen(s)]='\0';
-	printf(dyn_s);
+
+	printf("%s", dyn_s);
+
+	free(s);
 	return 0;
 }
 
